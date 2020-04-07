@@ -1,7 +1,10 @@
 package com.javirumu.mecaround;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -25,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
                 .apply(cropOptions)
                 .into(logotipo);
 
+
+    }
+
+    public void iniciarActivity(View view) {
+
+        Intent intent = new Intent(this, Incidences.class);
+        startActivity(intent);
 
     }
 }

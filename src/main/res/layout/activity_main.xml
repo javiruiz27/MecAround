@@ -75,6 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonEntrar" />
 
     <TextView
+        android:onClick="iniciarActivity"
         android:id="@+id/textViewVersionApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,6 +84,7 @@
         android:layout_marginBottom="16dp"
         android:text="v1.0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"></TextView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

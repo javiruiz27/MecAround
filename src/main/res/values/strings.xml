@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MecAround</string>
+    <string name="title_activity_incidences">Incidences</string>
 </resources>
