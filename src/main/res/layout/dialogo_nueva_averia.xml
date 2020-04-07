@@ -8,14 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Título" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/descripcionAveria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Descripción" />
+        android:inputType="textPersonName"/>
 </LinearLayout>
