@@ -8,12 +8,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Título"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/descripcionAveria"
+        android:id="@+id/modeloCocheAveria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"/>
+        android:hint="Modelo de coche"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Descripción"
+        android:inputType="textPersonName" />
 </LinearLayout>

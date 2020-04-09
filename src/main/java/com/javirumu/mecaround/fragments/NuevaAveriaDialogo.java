@@ -1,21 +1,27 @@
-package com.javirumu.mecaround;
+package com.javirumu.mecaround.fragments;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.javirumu.mecaround.R;
+import com.javirumu.mecaround.interfaces.OnNuevaAveriaListener;
+
 public class NuevaAveriaDialogo extends DialogFragment {
 
     OnNuevaAveriaListener aListener;
+    View v;
+    EditText editTextTitulo, editTextDescripcion, editTextModeloCoche;
 
     @NonNull
     @Override
@@ -28,7 +34,12 @@ public class NuevaAveriaDialogo extends DialogFragment {
 
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
-        builder.setView(inflater.inflate(R.layout.dialogo_nueva_averia, null));
+        v = inflater.inflate(R.layout.dialogo_nueva_averia, null);
+        editTextTitulo = v.findViewById(R.id.textViewTitulo);
+        editTextDescripcion = v.findViewById(R.id.textDescription);
+        editTextModeloCoche = v.findViewById(R.id.textViewModeloCoche);
+
+        builder.setView(v);
 
         builder.setTitle("Nueva Avería")
                 .setPositiveButton("Guardar", new DialogInterface.OnClickListener() {
@@ -36,6 +47,12 @@ public class NuevaAveriaDialogo extends DialogFragment {
                         // FIRE ZE MISSILES
                         Toast.makeText(getActivity(), "Avería guardada", Toast.LENGTH_LONG).show();
                         dialog.dismiss();
+
+                        String titulo = editTextTitulo.getText().toString();
+                        String modeloCoche = editTextModeloCoche.getText().toString();
+                        String descripcion = editTextDescripcion.getText().toString();
+
+
                         aListener.onAveriaGuardarClickListener();
                     }
                 })

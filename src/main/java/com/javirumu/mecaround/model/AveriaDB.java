@@ -1,16 +1,26 @@
-package com.javirumu.mecaround;
+package com.javirumu.mecaround.model;
 
-class Averia {
+import com.javirumu.mecaround.app.MyApp;
+
+import io.realm.Realm;
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+
+public class AveriaDB extends RealmObject{
+
+    @PrimaryKey
+    private long id;
 
     private String titulo;
     private String modeloCoche;
     private String urlImagen;
     private int numeroPresupuestos;
 
-    public Averia() {
+    public AveriaDB() {
+       this.id = MyApp.AveriaID.incrementAndGet();
     }
 
-    public Averia(String titulo, String modeloCoche, String urlImagen, int numeroPresupuestos) {
+    public AveriaDB(String titulo, String modeloCoche, String urlImagen, int numeroPresupuestos) {
         this.titulo = titulo;
         this.modeloCoche = modeloCoche;
         this.urlImagen = urlImagen;

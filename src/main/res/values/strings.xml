@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MecAround</string>
     <string name="title_activity_incidences">Incidences</string>
+    <string name="preferencias_mecaround_file">PreferenciasMecAround</string>
+    <string name="preferencias_email">PreferenciasEmail</string>
+    <string name="preferencias_isLogin">PreferenciasLopgin</string>
 </resources>

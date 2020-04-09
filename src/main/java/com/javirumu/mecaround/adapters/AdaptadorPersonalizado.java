@@ -1,4 +1,4 @@
-package com.javirumu.mecaround;
+package com.javirumu.mecaround.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,20 +12,22 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
+import com.javirumu.mecaround.model.AveriaDB;
+import com.javirumu.mecaround.R;
 
 import java.util.List;
 
-class AdaptadorPersonalizado extends ArrayAdapter<Averia> {
+public class AdaptadorPersonalizado extends ArrayAdapter<AveriaDB> {
 
     Context ctx;
     int layoutTemplate;
-    List<Averia> averiaList;
+    List<AveriaDB> averiaDBList;
 
-    public AdaptadorPersonalizado(@NonNull Context context, int resource, @NonNull List<Averia> objects) {
+    public AdaptadorPersonalizado(@NonNull Context context, int resource, @NonNull List<AveriaDB> objects) {
         super(context, resource, objects);
         this.ctx = context;
         this.layoutTemplate = resource;
-        this.averiaList = objects;
+        this.averiaDBList = objects;
     }
 
     @NonNull
@@ -34,7 +36,7 @@ class AdaptadorPersonalizado extends ArrayAdapter<Averia> {
         View v = LayoutInflater.from(ctx).inflate(layoutTemplate, parent, false);
 
         //Obtener la información del elemento de la vista que estoy iterando en este momento.
-        Averia elementActual = averiaList.get(position);
+        AveriaDB elementActual = averiaDBList.get(position);
 
         //Rescatar los elementos de la IU de la template
         TextView textViewtitulo = v.findViewById(R.id.textViewTitulo);

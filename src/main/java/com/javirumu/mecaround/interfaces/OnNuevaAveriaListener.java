@@ -1,4 +1,4 @@
-package com.javirumu.mecaround;
+package com.javirumu.mecaround.interfaces;
 
 public interface OnNuevaAveriaListener {
 
