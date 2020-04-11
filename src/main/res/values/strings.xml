@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MecAround</string>
+    <string name="title_activity_incidences">IncidencesActivity</string>
+
+    <!--Preferencias-->
+    <string name="preferencias_mecaround_file">PrefenciasMecAround</string>
+    <string name="preferencias_isLogin">islogin</string>
+    <string name="preferencias_email">PrefenciasEmail</string>
+    <string name="preferencias_nombre">PreferenciasNombre</string>
+    <string name="preferencias_server_key">PreferenciasServerKey</string>
+
 </resources>
